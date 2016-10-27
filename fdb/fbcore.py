@@ -430,10 +430,11 @@ def is_dead_proxy(obj):
 
 def b2u(st, charset):
     "Decode to unicode if charset is defined. For conversion of result set data."
-    if charset:
-        return st.decode(charset)
-    else:
-        return st
+    return st
+    # if charset:
+    #     return st.decode(charset)
+    # else:
+    #     return st
 
 def p3fix(st, charset):
     """For P3 convert bytes to string using connection charset, P2 as is.
